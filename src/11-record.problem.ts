@@ -1,7 +1,10 @@
 import { expect, it } from "vitest";
 
 const createCache = () => {
-  const cache = {};
+  // const cache = {}; // variable a modificar 
+
+  // const cache: { [key: string]: string } = {}; //!Una forma de tipar el objeto
+  const cache: Record<string, string> = {}; //! Otra forma de tipar el objeto "mas limpio"
 
   const add = (id: string, value: string) => {
     cache[id] = value;

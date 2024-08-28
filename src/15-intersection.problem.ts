@@ -1,3 +1,5 @@
+
+
 interface User {
   id: string;
   firstName: string;
@@ -10,13 +12,18 @@ interface Post {
   body: string;
 }
 
+type UserAndPost = User & { posts: Post[] } & {age: number};
+
+
 /**
  * How do we type this return statement so it's both
  * User AND { posts: Post[] }
  */
-export const getDefaultUserAndPosts = (): unknown => {
+// export const getDefaultUserAndPosts = ():   => {
+  export const getDefaultUserAndPosts = (): UserAndPost => {
   return {
     id: "1",
+    age: 30,
     firstName: "Matt",
     lastName: "Pocock",
     posts: [

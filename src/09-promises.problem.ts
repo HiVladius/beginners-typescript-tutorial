@@ -16,3 +16,7 @@ export const fetchLukeSkywalker = async (): Promise<LukeSkywalker> => {
 
   return data;
 };
+
+
+const luke = await fetchLukeSkywalker();
+console.log(luke);
